@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { loginUser, logoutUser } from "../../redux/user/actions";
 
 // Components
 import Cart from "../cart/index";
