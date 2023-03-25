@@ -8,7 +8,8 @@ import Cart from "../cart/index";
 import * as Styles from "./styles";
 
 // Utilities
-import { loginUser, logoutUser } from "../../redux/user/actions";
+// import { loginUser, logoutUser } from "../../redux/user/actions";
+import { login, logout } from "../../redux/user/slice";
 import { selectProductsCount } from "../../redux/cart/cart-selectors";
 
 function Header() {
@@ -25,11 +26,11 @@ function Header() {
   };
 
   const handleLoginClick = () => {
-    dispatch(loginUser({ username: "Sarah", password: 123 }));
+    dispatch(login({ username: "Sarah", password: 123 }));
   };
 
   const handleLogoutClick = () => {
-    dispatch(logoutUser());
+    dispatch(logout());
   };
 
   return (
