@@ -1,7 +1,7 @@
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 // import { removeProductFromCart, increaseProductQuantity, decreaseProductQuantity } from "../../redux/cart/actions";
-import { removeProduct, increaseProductQuantity, decreaseProductQuantity } from "../../redux/cart/slice";
+import { removeProduct, increaseProductQuantity, decreaseProductQuantity } from "../../store/cart/slice";
 
 // Styles
 import * as Styles from "./styles";

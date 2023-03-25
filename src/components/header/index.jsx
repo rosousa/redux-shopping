@@ -9,8 +9,8 @@ import * as Styles from "./styles";
 
 // Utilities
 // import { loginUser, logoutUser } from "../../redux/user/actions";
-import { login, logout } from "../../redux/user/slice";
-import { selectProductsCount } from "../../redux/cart/cart-selectors";
+import { login, logout } from "../../store/user/slice";
+import { selectProductsCount } from "../../store/cart/cart-selectors";
 
 function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
