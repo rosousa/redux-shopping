@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // Components
