@@ -3,16 +3,13 @@ import products from "../../data/products";
 // Components
 import ProductItem from "../product-item/index";
 
-// Styles
-import * as Styles from "./styles";
-
 const Products = () => {
   return (
-    <Styles.Container>
+    <div className="md:grid flex flex-col grid-cols-4 justify-items-start py-10 pl-10 gap-x-5">
       {products.map((product, index) => (
         <ProductItem product={product} key={index} />
       ))}
-    </Styles.Container>
+    </div>
   );
 };
 

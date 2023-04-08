@@ -35,7 +35,7 @@ function Header() {
       <div className="text-xl font-bold">Redux Shopping</div>
       <div className="flex items-center">
         { currentUser ? <div className="font-medium hover:cursor-pointer mr-10" onClick={handleLogoutClick}>Sair</div> : <div className="font-medium hover:cursor-pointer mr-10" onClick={handleLoginClick}>Login</div> }
-        <div className="font-medium" onClick={handleCartClick}>Carrinho ({ productsCount })</div>
+        <div className="font-medium hover:cursor-pointer" onClick={handleCartClick}>Carrinho ({ productsCount })</div>
       </div>
       <Cart isVisible={cartIsVisible} setIsVisible={setCartIsVisible} />
     </div>
