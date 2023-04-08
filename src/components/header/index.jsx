@@ -4,9 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 // Components
 import Cart from "../cart/index";
 
-// Styles
-import * as Styles from "./styles";
-
 // Utilities
 // import { loginUser, logoutUser } from "../../redux/user/actions";
 import { login, logout } from "../../store/user/slice";
@@ -34,15 +31,14 @@ function Header() {
   };
 
   return (
-    <Styles.Container>  
-      <Styles.Logo>Redux Shopping</Styles.Logo>
-      <Styles.Buttons>
-        { currentUser ? <div onClick={handleLogoutClick}>Sair</div> : <div onClick={handleLoginClick}>Login</div> }
-        <div onClick={handleCartClick}>Carrinho ({ productsCount })</div>
-      </Styles.Buttons>
-
+    <div className="w-full bg-zinc-900 flex justify-between text-slate-200 p-5 shadow-lg shadow-zinc-400">
+      <div className="text-xl font-bold">Redux Shopping</div>
+      <div className="flex items-center">
+        { currentUser ? <div className="font-medium hover:cursor-pointer mr-10" onClick={handleLogoutClick}>Sair</div> : <div className="font-medium hover:cursor-pointer mr-10" onClick={handleLoginClick}>Login</div> }
+        <div className="font-medium" onClick={handleCartClick}>Carrinho ({ productsCount })</div>
+      </div>
       <Cart isVisible={cartIsVisible} setIsVisible={setCartIsVisible} />
-    </Styles.Container>
+    </div>
   );
 }
 
